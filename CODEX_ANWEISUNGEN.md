@@ -2,13 +2,14 @@
 
 ## Ziel
 
-Dieses Repository wird zu einer public-safe, local-first Civic Protection Cell weiterentwickelt.
+Dieses Repository ist die public-safe, local-first Civic Protection Cell.
 
 Arbeitsziel:
 
 ```text
-PUBLIC_SAFE_RELEASE_CANDIDATE_READY
-PUBLIC_RELEASE_BLOCKED_UNTIL_HUMAN_APPROVAL
+PUBLIC_SAFE_LAYER_READY
+PUBLIC_RELEASE_PREP_OWNER_APPROVED
+PUBLIC_VISIBILITY_MANUAL_GITHUB_ACTION_REQUIRED
 ```
 
 Das System soll helfen bei:
@@ -30,7 +31,7 @@ Synthetic Data: only
 Human Review: required
 External Effect: blocked
 Protected Core: private
-Public Release: blocked until approval
+Repository Visibility: manual owner action only
 ```
 
 Codex darf keine Funktion einbauen, die ohne menschliche Freigabe nach außen wirkt.
@@ -47,6 +48,7 @@ Immer erhalten:
 - keine produktive Operator-Logik
 - keine geschützte kommerzielle Kernlogik im Public Layer
 - Human Review bleibt Pflicht
+- keine Veröffentlichung persönlicher Steuer- oder Bankdaten
 
 Bei Verstoß:
 
@@ -60,7 +62,7 @@ ACTION: stop, document, propose safer path
 Aktuelles Ziel-Repo:
 
 ```text
-Cyberperpunk2078/civic-protection-cell-public
+Cyberpunk2088/civic-protection-cell-public
 ```
 
 Repo-Namensprüfung:
@@ -68,11 +70,15 @@ Repo-Namensprüfung:
 ```text
 REPO_NAME_PUBLIC_REVIEW: RESOLVED
 REPOSITORY_NAME: civic-protection-cell-public
-REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
-PUBLIC_RELEASE: BLOCKED
-HUMAN_APPROVAL: NOT_GIVEN
-CI_STATUS: PASSED_OBSERVED
+REPOSITORY_FULL_NAME: Cyberpunk2088/civic-protection-cell-public
+PUBLIC_RELEASE_PREP: OWNER_APPROVED
+PUBLIC_VISIBILITY: PRIVATE_UNTIL_MANUAL_GITHUB_ACTION
+HUMAN_APPROVAL: GIVEN
+HUMAN_APPROVAL_FILE: PRESENT_GUARDED
+CI_STATUS: PASSED_OBSERVED_AFTER_HUMAN_APPROVAL_TEST_FIX
 PROTECTED_CORE: CONFIRMED_EXCLUDED
+TAX_NUMBER_PUBLICATION: NO
+BANK_DATA_PUBLICATION: NO
 ```
 
 ## Roadmap
@@ -95,7 +101,7 @@ Prüfen:
 - Security-Dokumente vorhanden
 - CI-Workflow vorhanden
 
-### Phase 1 — Core vervollständigen
+### Phase 1 — Core erhalten
 
 Erforderliche Module:
 
@@ -120,7 +126,7 @@ Anforderungen:
 - Fristenmodul liefert nur Risiko-Hinweis
 - Klassifikation bleibt heuristisch
 
-### Phase 2 — Tests vervollständigen
+### Phase 2 — Tests erhalten
 
 Erforderliche Tests:
 
@@ -150,7 +156,7 @@ Erwartung:
 all tests passed
 ```
 
-### Phase 3 — CI einrichten
+### Phase 3 — CI erhalten
 
 Erforderlich:
 
@@ -166,7 +172,7 @@ Workflow:
 - nur minimale Rechte
 - kein Deployment
 
-### Phase 4 — Governance-Dateien ergänzen
+### Phase 4 — Governance-Dateien erhalten
 
 Erforderliche Dateien:
 
@@ -182,6 +188,9 @@ THREAT_MODEL.md
 LICENSE.md
 CHANGELOG.md
 ROADMAP.md
+LEGAL_RELEASE_BLOCKERS.md
+PUBLIC_GO_LIVE_PACKET.md
+HUMAN_APPROVAL.md
 ```
 
 Mindestinhalt:
@@ -195,7 +204,7 @@ Mindestinhalt:
 
 ### Phase 5 — Supportpfade setzen
 
-Dokumentiere in:
+Dokumentiert in:
 
 ```text
 SPONSORSHIP_AND_SUPPORT.md
@@ -224,12 +233,6 @@ License: Source-available public-safe working draft
 Commercial use: requires permission or separate agreement
 ```
 
-Erstelle:
-
-```text
-LICENSE.md
-```
-
 Lizenz muss klarstellen:
 
 - Attribution bleibt erhalten
@@ -239,12 +242,6 @@ Lizenz muss klarstellen:
 - Public-Safe-Grenzen bleiben bestehen
 
 ### Phase 7 — Protected Core prüfen
-
-Erstelle:
-
-```text
-PROTECTED_CORE_AUDIT.md
-```
 
 Nicht öffentlich aufnehmen:
 
@@ -259,12 +256,6 @@ Nicht öffentlich aufnehmen:
 
 ### Phase 8 — Final Audit
 
-Erstelle:
-
-```text
-FINAL_AUDIT_REPORT.md
-```
-
 Pflichtpunkte:
 
 - Teststatus
@@ -275,19 +266,20 @@ Pflichtpunkte:
 - Human-Review-Status
 - Payment-/Support-Status
 - License-/Rights-Status
-- offene Blocker
+- offene manuelle Schritte
 - Release-Entscheidung
 
-Erlaubter Status vor Approval:
+Erlaubter Status nach Owner Approval:
 
 ```text
-AUDIT_STATUS: PASSED_WITH_RELEASE_BLOCKERS
-PUBLIC_RELEASE: BLOCKED
+AUDIT_STATUS: PASSED_WITH_MANUAL_VISIBILITY_PENDING
+PUBLIC_RELEASE_PREP: OWNER_APPROVED
+PUBLIC_VISIBILITY: PRIVATE_UNTIL_MANUAL_GITHUB_ACTION
 ```
 
-### Phase 9 — Release Candidate vorbereiten
+### Phase 9 — Release Candidate
 
-Nur wenn erfüllt:
+Erfüllt, wenn:
 
 - Tests bestanden
 - CI bestanden
@@ -298,28 +290,25 @@ Nur wenn erfüllt:
 - README vollständig
 - keine echten Daten
 - keine Zugangsdaten
+- Human Approval guarded vorhanden
 
 Status:
 
 ```text
-PUBLIC_SAFE_RELEASE_CANDIDATE_READY
-PUBLIC_RELEASE: BLOCKED_UNTIL_HUMAN_APPROVAL
+PUBLIC_SAFE_RELEASE_PREP_READY
+PUBLIC_VISIBILITY: MANUAL_GITHUB_OWNER_ACTION_REQUIRED
 ```
 
 ### Phase 10 — Human Approval
 
-Codex darf Public Release nicht selbst freigeben.
+`HUMAN_APPROVAL.md` ist vorhanden und guarded.
 
-Erforderliche Datei:
-
-```text
-HUMAN_APPROVAL.md
-```
-
-Ohne diese Datei bleibt:
+Codex darf trotzdem keine Repository-Sichtbarkeit ändern.
 
 ```text
-PUBLIC_RELEASE: BLOCKED
+HUMAN_APPROVAL: GIVEN
+HUMAN_APPROVAL_FILE: PRESENT_GUARDED
+REPOSITORY_VISIBILITY_CHANGE: MANUAL_GITHUB_ACTION_REQUIRED
 ```
 
 ## Codex-Arbeitsmodus
@@ -348,6 +337,7 @@ Stoppen, wenn:
 - Protected Core öffentlich wird
 - Tests fehlschlagen
 - Lizenzstatus unklar wird
+- persönliche Steuer- oder Bankdaten veröffentlicht werden sollen
 
 Dann dokumentieren:
 
@@ -376,19 +366,6 @@ Audit updated
 Release status honest
 ```
 
-## Nächster Auftrag
-
-```text
-1. Complete missing docs and workflows.
-2. Add missing tests for classifier, deadline checker, evidence card and demo.
-3. Add funding configuration.
-4. Add conservative LICENSE.md.
-5. Add CHANGELOG.md and ROADMAP.md.
-6. Run CI.
-7. Create FINAL_AUDIT_REPORT.md.
-8. Keep PUBLIC_RELEASE blocked until HUMAN_APPROVAL.md exists.
-```
-
 ## Leitsatz
 
 ```text
@@ -397,5 +374,6 @@ Keep data synthetic.
 Keep external effect blocked.
 Keep human review mandatory.
 Keep the protected core protected.
-Release only with explicit human approval.
+Keep personal tax and bank data private.
+Visibility changes stay manual.
 ```

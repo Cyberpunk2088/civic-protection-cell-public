@@ -20,6 +20,7 @@
 - Heuristic classifier behavior.
 - Evidence card conservative defaults.
 - Demo JSON output.
+- Guarded Human Approval record check.
 
 ## Governance
 
@@ -30,21 +31,26 @@
 - Threat model.
 - Source-available working draft license.
 - Protected Core Audit.
+- Legal release blockers.
+- Human Approval record.
 
 ## Audit
 
 - Baseline audit.
 - Protected Core Audit.
 - Final Audit Report.
-- Human Review required before release.
+- Human Review required before real-world use.
+- Repository visibility remains manual.
 
 ## Release Candidate
 
-Release candidate may be prepared only after tests, CI observation or honest CI blocker documentation, audit completion and protected core exclusion.
+The public-safe layer is prepared for owner-controlled public release after tests, CI observation, audit completion, protected-core exclusion and guarded Human Approval.
 
 ## Human Approval
 
-Public release remains blocked until `HUMAN_APPROVAL.md` is intentionally created and reviewed by a human.
+`HUMAN_APPROVAL.md` exists and is guarded. It approves public-release preparation for the public-safe repository layer only.
+
+It does not replace legal, tax, provider-identification, consumer-law or platform-policy review.
 
 ## Repository Name
 
@@ -53,11 +59,15 @@ Repository naming review is resolved.
 ```text
 REPO_NAME_PUBLIC_REVIEW: RESOLVED
 REPOSITORY_NAME: civic-protection-cell-public
-REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
-PUBLIC_RELEASE: BLOCKED
-HUMAN_APPROVAL: NOT_GIVEN
-CI_STATUS: PASSED_OBSERVED
+REPOSITORY_FULL_NAME: Cyberpunk2088/civic-protection-cell-public
+PUBLIC_RELEASE_PREP: OWNER_APPROVED
+PUBLIC_VISIBILITY: PRIVATE_UNTIL_MANUAL_GITHUB_ACTION
+HUMAN_APPROVAL: GIVEN
+HUMAN_APPROVAL_FILE: PRESENT_GUARDED
+CI_STATUS: PASSED_OBSERVED_AFTER_HUMAN_APPROVAL_TEST_FIX
 PROTECTED_CORE: CONFIRMED_EXCLUDED
+TAX_NUMBER_PUBLICATION: NO
+BANK_DATA_PUBLICATION: NO
 ```
 
 ## Long-Term Improvements
@@ -67,3 +77,4 @@ PROTECTED_CORE: CONFIRMED_EXCLUDED
 - Better deadline-risk detection without final deadline calculation.
 - Better local UI.
 - Better protected-core templates outside the public layer.
+- Better public landing copy after final owner/legal/tax review.
