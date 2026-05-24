@@ -11,29 +11,31 @@ class DeadlineRisk:
 
 
 DEADLINE_PATTERNS = [
-    r"innerhalb von\s+\d+\s+(tagen|wochen|monaten)",
-    r"bis zum\s+\d{1,2}\.\d{1,2}\.\d{4}",
-    r"frist",
-    r"widerspruch",
-    r"anhoerung|anhörung",
+    (
+        "pattern: relative_duration",
+        r"\binnerhalb von\s+\d+\s+(tagen|wochen|monaten)\b",
+    ),
+    ("pattern: calendar_date", r"\bbis zum\s+\d{1,2}\.\d{1,2}\.\d{4}\b"),
+    ("keyword: frist", r"\b\w*frist\w*\b"),
+    ("keyword: widerspruch", r"\b\w*widerspruch\w*\b"),
+    ("keyword: anhoerung", r"\b\w*(anhoerung|anhörung)\w*\b"),
 ]
 
 
 def detect_deadline_risk(text: str) -> DeadlineRisk:
     lower = text.lower()
-    pattern_hits = []
-    for pattern in DEADLINE_PATTERNS:
+    evidence = []
+    for label, pattern in DEADLINE_PATTERNS:
         if re.search(pattern, lower):
-            pattern_hits.append(pattern)
+            evidence.append(label)
 
-    direct_hits = [word for word in ["frist", "widerspruch", "anhörung", "anhoerung"] if word in lower]
-    possible = bool(pattern_hits or direct_hits)
+    possible = bool(evidence)
 
     if possible:
         return DeadlineRisk(
             possible_deadline_detected=True,
             risk_level="NEEDS_HUMAN_REVIEW",
-            evidence=direct_hits or ["deadline pattern detected"],
+            evidence=evidence,
             note="Possible deadline risk. No final deadline calculation. Human review required.",
         )
 
