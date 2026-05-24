@@ -60,13 +60,19 @@ ACTION: stop, document, propose safer path
 Aktuelles Ziel-Repo:
 
 ```text
-Cyberperpunk2078/-civic-protection-cell-public
+Cyberperpunk2078/civic-protection-cell-public
 ```
 
-Der führende Bindestrich ist für ein späteres öffentliches Repo nicht optimal. Für die private Zielablage kann weitergearbeitet werden. Vor einem finalen öffentlichen Release sollte ein Name ohne führenden Bindestrich geprüft werden:
+Repo-Namensprüfung:
 
 ```text
-civic-protection-cell-public
+REPO_NAME_PUBLIC_REVIEW: RESOLVED
+REPOSITORY_NAME: civic-protection-cell-public
+REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
+PUBLIC_RELEASE: BLOCKED
+HUMAN_APPROVAL: NOT_GIVEN
+CI_STATUS: PASSED_OBSERVED
+PROTECTED_CORE: CONFIRMED_EXCLUDED
 ```
 
 ## Roadmap

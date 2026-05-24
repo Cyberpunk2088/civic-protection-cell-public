@@ -1,7 +1,7 @@
 # Audit Baseline
 
 Date: 2026-05-24
-Repository: `Cyberperpunk2078/-civic-protection-cell-public`
+Repository: `Cyberperpunk2078/civic-protection-cell-public`
 Project name: `civic-protection-cell-public`
 Phase: `0`
 
@@ -9,14 +9,18 @@ Phase: `0`
 
 ```text
 BASELINE_STATUS: CHECKED
+REPOSITORY_NAME: civic-protection-cell-public
+REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
 PRIVATE_TARGET_REPO: ACTIVE
 PUBLIC_RELEASE: BLOCKED
+HUMAN_APPROVAL: NOT_GIVEN
 PUBLIC_RELEASE_REASON: HUMAN_APPROVAL.md intentionally absent
+CI_STATUS: PASSED_OBSERVED
 REAL_DATA: PROHIBITED
 SYNTHETIC_DATA_ONLY: REQUIRED
 EXTERNAL_EFFECT: BLOCKED
 HUMAN_REVIEW: REQUIRED
-PROTECTED_CORE: PRIVATE
+PROTECTED_CORE: CONFIRMED_EXCLUDED
 NEXT_PHASE: CORE_COMPLETION
 ```
 

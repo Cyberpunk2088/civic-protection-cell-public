@@ -1,7 +1,7 @@
 # Final Audit Report
 
 Date: 2026-05-24
-Repository: `Cyberperpunk2078/-civic-protection-cell-public`
+Repository: `Cyberperpunk2078/civic-protection-cell-public`
 Project: `civic-protection-cell-public`
 
 ## Scope
@@ -14,19 +14,22 @@ The audit covers repository structure, core Python modules, local tests, governa
 
 ```text
 AUDIT_STATUS: PASSED_WITH_RELEASE_BLOCKERS
+REPOSITORY_NAME: civic-protection-cell-public
+REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
+REPO_NAME_PUBLIC_REVIEW: RESOLVED
 PRIVATE_TARGET_REPO: ACTIVE
 PUBLIC_RELEASE: BLOCKED
 PUBLIC_RELEASE_REASON: HUMAN_APPROVAL.md absent
 PUBLIC_SAFE_RELEASE_CANDIDATE_READY: READY_BUT_BLOCKED
 TEST_STATUS: PASSED_LOCAL_PYTHON3
 LOCAL_TEST_STATUS: PASSED
-CI_STATUS: PASSED
+CI_STATUS: PASSED_OBSERVED
 HUMAN_APPROVAL: NOT_GIVEN
 HUMAN_REVIEW: REQUIRED
 EXTERNAL_EFFECT: BLOCKED
 REAL_DATA: PROHIBITED
 SYNTHETIC_DATA_ONLY: REQUIRED
-PROTECTED_CORE: PRIVATE
+PROTECTED_CORE: CONFIRMED_EXCLUDED
 ```
 
 ## Teststatus
@@ -72,7 +75,7 @@ result: success
 ```
 
 ```text
-CI_STATUS: PASSED
+CI_STATUS: PASSED_OBSERVED
 ```
 
 Note: GitHub Actions emitted a Node.js 20 deprecation warning for `actions/checkout@v4` and `actions/setup-python@v5`. This is not a failed CI result, but it should be tracked before later public release work.
@@ -169,13 +172,15 @@ LEGAL_REVIEW_RECOMMENDED_BEFORE_PUBLIC_RELEASE
 Current private target repository:
 
 ```text
-Cyberperpunk2078/-civic-protection-cell-public
+Cyberperpunk2078/civic-protection-cell-public
 ```
 
-Before public release, review whether a clean public repository without a leading hyphen should be used:
+Repository naming review:
 
 ```text
-civic-protection-cell-public
+REPO_NAME_PUBLIC_REVIEW: RESOLVED
+REPOSITORY_NAME: civic-protection-cell-public
+REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
 ```
 
 ## Offene Blocker
@@ -184,7 +189,6 @@ civic-protection-cell-public
 HUMAN_APPROVAL.md: ABSENT_BY_DESIGN
 PUBLIC_RELEASE: BLOCKED
 LEGAL_REVIEW: RECOMMENDED_BEFORE_PUBLIC_RELEASE
-REPO_NAME_PUBLIC_REVIEW: OPEN
 GITHUB_ACTIONS_NODE20_DEPRECATION_WARNING: OBSERVED
 ```
 

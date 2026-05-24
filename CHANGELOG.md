@@ -13,3 +13,4 @@
 - Safety tests expanded for no external action, absent Human Approval, and private-data-pattern checks in tests and examples.
 - Added manual workflow dispatch for observable CI verification.
 - Recorded observed GitHub Actions test success while keeping public release blocked.
+- Resolved repository naming review for `Cyberperpunk2078/civic-protection-cell-public`.

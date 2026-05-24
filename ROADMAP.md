@@ -48,16 +48,16 @@ Public release remains blocked until `HUMAN_APPROVAL.md` is intentionally create
 
 ## Repository Name
 
-The private target repo currently begins with a leading hyphen:
+Repository naming review is resolved.
 
 ```text
--civic-protection-cell-public
-```
-
-Before public release, consider a clean public repository name:
-
-```text
-civic-protection-cell-public
+REPO_NAME_PUBLIC_REVIEW: RESOLVED
+REPOSITORY_NAME: civic-protection-cell-public
+REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
+PUBLIC_RELEASE: BLOCKED
+HUMAN_APPROVAL: NOT_GIVEN
+CI_STATUS: PASSED_OBSERVED
+PROTECTED_CORE: CONFIRMED_EXCLUDED
 ```
 
 ## Long-Term Improvements
