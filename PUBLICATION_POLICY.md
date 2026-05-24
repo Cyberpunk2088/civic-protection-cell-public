@@ -4,7 +4,7 @@
 
 ```text
 REPOSITORY_NAME: civic-protection-cell-public
-REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
+REPOSITORY_FULL_NAME: Cyberpunk2088/civic-protection-cell-public
 REPO_NAME_PUBLIC_REVIEW: RESOLVED
 PRIVATE_TARGET_REPO: ACTIVE
 PUBLIC_RELEASE: BLOCKED
