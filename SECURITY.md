@@ -25,9 +25,13 @@ Do not upload real case files, real screenshots, private letters, account data, 
 
 If you find a safety issue, open a GitHub issue without sensitive details. Do not include credentials, personal data, tokens, cookies, private documents or real case details in issues.
 
+Before public release, the security contact and vulnerability-reporting process must be reviewed so sensitive details can be reported without public disclosure.
+
 ## No External Action
 
 This project must not send messages, submit documents, contact authorities, contact courts, run external scans or execute productive agent write actions.
+
+This public repository does not authorize any external action or production workflow.
 
 ## Human Review
 
