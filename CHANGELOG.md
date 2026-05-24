@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- 2026-05-24: Referenced payment channel structure in the monetization model while keeping Public Release blocked and Human Approval not given.
 - 2026-05-24: Synced legal wording hardening onto a fresh main-based branch while keeping Public Release blocked and Human Approval not given.
 - 2026-05-24: Merged PR #5 and recorded post-merge validation for deadline-risk evidence labels. Public Release remains blocked and Human Approval remains not given.
 

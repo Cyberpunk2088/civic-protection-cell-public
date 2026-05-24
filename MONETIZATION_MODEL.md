@@ -6,6 +6,7 @@ Status:
 MONETIZATION_MODEL: DRAFT_ONLY
 PUBLIC_RELEASE: BLOCKED
 HUMAN_APPROVAL: NOT_GIVEN
+PAYMENT_LINKS: REFERENCED_FOR_REVIEW
 ```
 
 Potential public-safe monetization paths:
@@ -14,6 +15,13 @@ Potential public-safe monetization paths:
 - Paid templates that remain outside the public repository until separately reviewed.
 - Setup service for local, public-safe workflows under a separate written agreement.
 - B2B governance toolkit for documentation, audit structure, synthetic examples and review gates.
+
+Payment channel structure:
+
+- Voluntary support and donation payments are documented in `SPONSORSHIP_AND_SUPPORT.md`.
+- Separately agreed paid-work payments are documented in `SPONSORSHIP_AND_SUPPORT.md`.
+- Payment links are not a public-release approval.
+- Payment links are not a completed public offer without provider, privacy, consumer, tax and invoice review.
 
 Boundaries:
 
