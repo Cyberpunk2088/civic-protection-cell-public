@@ -31,6 +31,7 @@ REAL_DATA: PROHIBITED
 SYNTHETIC_DATA_ONLY: REQUIRED
 PROTECTED_CORE: CONFIRMED_EXCLUDED
 NODE20_DEPRECATION_WARNING: TRACKED
+NODE24_ACTIONS_UPDATE_STATUS: PENDING_CI_OBSERVATION
 LEGAL_REVIEW: RECOMMENDED_BEFORE_PUBLIC_RELEASE
 ```
 
@@ -92,6 +93,8 @@ CI_STATUS: PASSED_OBSERVED
 ```
 
 Note: GitHub Actions emitted a Node.js 20 deprecation warning for `actions/checkout@v4` and `actions/setup-python@v5`. This is not a failed CI result. It is tracked in `MAINTENANCE_NODE20_ACTIONS_WARNING.md` before later public release work.
+
+The official GitHub releases for `actions/checkout@v6` and `actions/setup-python@v6` were checked. The workflow has been updated to v6 action tags and must be observed in CI before the Node.js 20 warning can be marked resolved.
 
 ## Safety-Invariants
 
@@ -203,6 +206,7 @@ HUMAN_APPROVAL.md: ABSENT_BY_DESIGN
 PUBLIC_RELEASE: BLOCKED
 LEGAL_REVIEW: RECOMMENDED_BEFORE_PUBLIC_RELEASE
 GITHUB_ACTIONS_NODE20_DEPRECATION_WARNING: TRACKED
+NODE24_ACTIONS_UPDATE_STATUS: PENDING_CI_OBSERVATION
 ```
 
 ## Release-Entscheidung
