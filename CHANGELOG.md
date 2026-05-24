@@ -10,3 +10,5 @@
 - Protected core excluded from public layer.
 - Governance, funding, publication, threat model and audit documents added.
 - Core tests expanded for classifier, deadline checker, evidence card and demo.
+- Safety tests expanded for no external action, absent Human Approval, and private-data-pattern checks in tests and examples.
+- Added manual workflow dispatch for observable CI verification.

@@ -7,6 +7,7 @@ def test_deadline_signal_requires_human_review():
     assert result.possible_deadline_detected is True
     assert result.risk_level == "NEEDS_HUMAN_REVIEW"
     assert "Human review required" in result.note
+    assert "No final deadline calculation" in result.note
 
 
 def test_no_deadline_signal_is_low_risk_note_only():
@@ -15,3 +16,11 @@ def test_no_deadline_signal_is_low_risk_note_only():
     assert result.possible_deadline_detected is False
     assert result.risk_level == "LOW"
     assert "not a legal conclusion" in result.note
+
+
+def test_calendar_date_deadline_signal_requires_human_review():
+    result = detect_deadline_risk("Synthetischer Brief: Bitte antworten Sie bis zum 31.12.2026.")
+
+    assert result.possible_deadline_detected is True
+    assert result.risk_level == "NEEDS_HUMAN_REVIEW"
+    assert "Human review required" in result.note

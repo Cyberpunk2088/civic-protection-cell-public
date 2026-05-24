@@ -18,6 +18,10 @@ PRIVATE_TARGET_REPO: ACTIVE
 PUBLIC_RELEASE: BLOCKED
 PUBLIC_RELEASE_REASON: HUMAN_APPROVAL.md absent and CI not observed
 PUBLIC_SAFE_RELEASE_CANDIDATE_READY: NOT_SET
+TEST_STATUS: PASSED_LOCAL_PYTHON3
+LOCAL_TEST_STATUS: PASSED
+CI_STATUS: NOT_OBSERVED
+HUMAN_APPROVAL: NOT_GIVEN
 HUMAN_REVIEW: REQUIRED
 EXTERNAL_EFFECT: BLOCKED
 REAL_DATA: PROHIBITED
@@ -31,7 +35,7 @@ Local command observed:
 
 ```text
 python3 -m pytest -q
-13 passed in 0.14s
+21 passed in 0.13s
 ```
 
 Status:
@@ -40,7 +44,13 @@ Status:
 TEST_STATUS: PASSED
 ```
 
-Note: `python -m pytest -q` could not run because `python` is not available on this machine. The equivalent `python3 -m pytest -q` passed.
+Note: `python -m pytest -q` could not run because `python` is not available on this machine:
+
+```text
+/bin/bash: python: command not found
+```
+
+The equivalent `python3 -m pytest -q` passed locally.
 
 ## CI-Status
 
@@ -50,7 +60,9 @@ CI workflow file exists:
 .github/workflows/tests.yml
 ```
 
-CI was not observed in this run.
+The workflow includes `workflow_dispatch` so CI can be manually triggered and observed.
+
+CI was not observed as a successful GitHub Actions run in this run.
 
 ```text
 CI_STATUS: NOT_OBSERVED
@@ -172,6 +184,7 @@ REPO_NAME_PUBLIC_REVIEW: OPEN
 ```text
 PUBLIC_RELEASE: BLOCKED
 RELEASE_CANDIDATE_READY: NOT_SET
+NEXT_ACTION: manually run GitHub Actions workflow_dispatch and observe result
 ```
 
 Reason: CI was not observed and Human Approval has not been given.
@@ -181,6 +194,7 @@ Reason: CI was not observed and Human Approval has not been given.
 ```text
 git status --short
 python3 -m pytest -q
+manually run GitHub Actions workflow_dispatch and observe result
 ```
 
 After human review, optionally observe GitHub Actions on the private repo. Do not create `HUMAN_APPROVAL.md` unless explicit human approval is given.

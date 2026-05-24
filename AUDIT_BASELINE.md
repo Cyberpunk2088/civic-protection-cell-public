@@ -37,23 +37,23 @@ NEXT_PHASE: CORE_COMPLETION
 | `src/civic_protection_cell/review_gate.py` | PRESENT | External action blocked. |
 | `src/civic_protection_cell/output.py` | PRESENT | Structured local output present. |
 | `src/civic_protection_cell/demo.py` | PRESENT | Synthetic local demo present. |
-| `tests/` | PRESENT | Tests present; expanded in this run. |
+| `tests/` | PRESENT | Tests present. |
 | `examples/synthetic_only/` | PRESENT | Synthetic example present. |
-| `SECURITY.md` | PRESENT | Updated with public-safe reporting rules. |
-| `DISCLAIMER.md` | PRESENT | Updated with no-final-advice boundary. |
-| `ABUSE_PREVENTION.md` | PRESENT | Updated with external-effect block. |
-| `VALUE_AND_SURVIVAL.md` | PRESENT | Updated with public/protected layer split. |
-| `SPONSORSHIP_AND_SUPPORT.md` | PRESENT | Added in this run. |
-| `NAME_AND_IDENTITY_PROTECTION.md` | PRESENT | Added in this run. |
-| `PUBLICATION_POLICY.md` | PRESENT | Added in this run. |
-| `THREAT_MODEL.md` | PRESENT | Added in this run. |
-| `LICENSE.md` | PRESENT | Added as conservative source-available working draft. |
-| `CHANGELOG.md` | PRESENT | Added in this run. |
-| `ROADMAP.md` | PRESENT | Added in this run. |
-| `.github/FUNDING.yml` | PRESENT | Added in this run. |
-| `.github/workflows/tests.yml` | PRESENT | Added in this run. |
-| `PROTECTED_CORE_AUDIT.md` | PRESENT | Added in this run. |
-| `FINAL_AUDIT_REPORT.md` | PRESENT | Created after local tests in this run. |
+| `SECURITY.md` | PRESENT | Public-safe reporting rules documented. |
+| `DISCLAIMER.md` | PRESENT | No-final-advice boundary documented. |
+| `ABUSE_PREVENTION.md` | PRESENT | External-effect block documented. |
+| `VALUE_AND_SURVIVAL.md` | PRESENT | Public/protected layer split documented. |
+| `SPONSORSHIP_AND_SUPPORT.md` | PRESENT | Support and pay-for-work boundaries documented. |
+| `NAME_AND_IDENTITY_PROTECTION.md` | PRESENT | Identity protection guidance documented. |
+| `PUBLICATION_POLICY.md` | PRESENT | Publication gates documented. |
+| `THREAT_MODEL.md` | PRESENT | Threat model documented. |
+| `LICENSE.md` | PRESENT | Conservative source-available working draft present. |
+| `CHANGELOG.md` | PRESENT | Changelog present. |
+| `ROADMAP.md` | PRESENT | Roadmap present. |
+| `.github/FUNDING.yml` | PRESENT | Funding links present. |
+| `.github/workflows/tests.yml` | PRESENT | Local test workflow present. |
+| `PROTECTED_CORE_AUDIT.md` | PRESENT | Protected-core exclusion documented. |
+| `FINAL_AUDIT_REPORT.md` | PRESENT | Final audit report present and must be refreshed after current tests. |
 | `HUMAN_APPROVAL.md` | ABSENT_BY_DESIGN | Required only for public release approval. |
 
 ## Baseline Decision
