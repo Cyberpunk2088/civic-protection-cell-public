@@ -1,6 +1,8 @@
 # Civic Protection Cell Public
 
-Public-safe, local-first prototype for civic document structure, deadline-risk awareness, evidence cards and human review gating.
+Synthetic-data-only, local-first working draft for civic document structure, deadline-risk awareness, evidence cards and human review gating.
+
+This repository is not a legal service, not legal advice, not an official authority or court system, and not suitable for real cases without separate qualified human review.
 
 ## Status
 
@@ -10,6 +12,7 @@ REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
 REPOSITORY_VISIBILITY: PRIVATE
 PUBLIC_RELEASE: BLOCKED
 HUMAN_APPROVAL: NOT_GIVEN
+LEGAL_REVIEW: OPEN
 TEST_STATUS: PASSED_LOCAL_PYTHON3
 CI_STATUS: PASSED_OBSERVED
 EXTERNAL_ACTION: BLOCKED
@@ -35,6 +38,7 @@ It can:
 
 It must not:
 
+- process real case material
 - process real public case files in examples
 - send messages
 - submit documents
@@ -57,9 +61,13 @@ Public-safe means documentation, synthetic examples, non-production review-gate 
 
 Protected core remains private: production workflows, premium templates, real case data, operator notes, client-specific logic and commercial implementation methodology.
 
+This public repository does not authorize any external action. Any future external-action implementation would require separate private/legal review and remains outside this public layer.
+
 ## Support
 
 Donation/support and unrestricted payment links are listed in `SPONSORSHIP_AND_SUPPORT.md`.
+
+Payments, donations, sponsorships, or support do not create legal-advice duties, emergency support, response-time guarantees, release approval, production readiness, or access to the Protected Core.
 
 ## Release Note
 
