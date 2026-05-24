@@ -3,9 +3,9 @@
 ## Status
 
 ```text
-NODE20_DEPRECATION_WARNING: OBSERVED
+NODE20_DEPRECATION_WARNING: RESOLVED
 CI_STATUS: PASSED_OBSERVED
-NODE24_ACTIONS_UPDATE_STATUS: PENDING_CI_OBSERVATION
+NODE24_ACTIONS_UPDATE_STATUS: PASSED_OBSERVED
 PUBLIC_RELEASE: BLOCKED
 HUMAN_APPROVAL: NOT_GIVEN
 ```
@@ -19,7 +19,17 @@ GitHub Actions emitted a Node.js 20 deprecation warning for:
 
 ## Current Impact
 
-The warning did not fail the observed CI run.
+The original warning did not fail the observed CI run.
+
+After updating the workflow to `actions/checkout@v6` and `actions/setup-python@v6`, GitHub Actions completed successfully for the runtime update commit:
+
+```text
+commit: debf15839bc9f53f2cfb1a048582f53afa86ad3e
+workflow: tests
+event: push
+run: 26354560832
+result: success
+```
 
 ## Official Release Check
 
@@ -50,6 +60,7 @@ Only update after confirming the official action versions support the newer runt
 ## Current Decision
 
 ```text
-NODE20_WARNING_STATUS: ACTIONS_V6_UPDATE_PENDING_CI_OBSERVATION
+NODE20_WARNING_STATUS: RESOLVED_BY_ACTIONS_V6_UPDATE
+CI_STATUS_FOR_ACTIONS_RUNTIME_UPDATE: PASSED_OBSERVED
 PUBLIC_RELEASE: BLOCKED
 ```
