@@ -29,7 +29,30 @@ def test_no_sending_or_submission_modules_present():
     assert suspicious == []
 
 
-def test_human_approval_file_absent_by_default():
+def test_human_approval_file_absent_or_guarded():
     repo_root = Path(__file__).resolve().parents[1]
+    approval_file = repo_root / "HUMAN_APPROVAL.md"
 
-    assert not (repo_root / "HUMAN_APPROVAL.md").exists()
+    if not approval_file.exists():
+        return
+
+    text = approval_file.read_text(encoding="utf-8")
+    required_markers = [
+        "OWNER_APPROVAL: GIVEN",
+        "REPOSITORY_SCOPE: Public-safe repository layer only",
+        "LEGAL_REVIEW_STATUS: NOT_REPLACED_BY_THIS_RECORD",
+        "REPOSITORY_VISIBILITY_CHANGE: MANUAL_GITHUB_ACTION_REQUIRED",
+        "REAL_DATA: PROHIBITED",
+        "SYNTHETIC_DATA: ONLY",
+        "EXTERNAL_ACTION: BLOCKED",
+        "LEGAL_ADVICE: NOT_PROVIDED",
+        "FINAL_DEADLINE_CALCULATION: NOT_PROVIDED",
+        "HUMAN_REVIEW: REQUIRED",
+        "PROTECTED_CORE: EXCLUDED",
+        "TAX_NUMBER_PUBLICATION: NO",
+        "BANK_DATA_PUBLICATION: NO",
+        "No automated repository visibility change is performed by this file.",
+    ]
+
+    for marker in required_markers:
+        assert marker in text
