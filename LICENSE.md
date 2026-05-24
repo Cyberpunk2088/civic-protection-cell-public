@@ -32,6 +32,8 @@ Commercial use requires written permission, a commercial license or a separate a
 
 This working draft is provided without warranty and without liability acceptance. It is not legal advice, medical advice, financial advice or an administrative final decision system.
 
+Nothing in this license limits mandatory statutory rights or liabilities that cannot legally be excluded.
+
 ## License Status
 
 ```text
