@@ -74,6 +74,17 @@ run: 26354008820
 result: success
 ```
 
+Observed rename documentation commit run:
+
+```text
+commit: 5f88dd1d6da09625b62619a740252613fab4c785
+workflow: tests
+event: workflow_dispatch
+run: 26354315043
+result: success
+CI_STATUS_FOR_RENAME_DOC_COMMIT: PASSED_OBSERVED
+```
+
 ```text
 CI_STATUS: PASSED_OBSERVED
 ```
