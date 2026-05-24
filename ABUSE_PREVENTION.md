@@ -1,0 +1,25 @@
+# Abuse Prevention Policy
+
+This project is for safe, human-reviewed, local and misuse-resistant workflows.
+
+## Prohibited Use
+
+This project must not be used for:
+
+- fraud
+- harassment
+- identity misuse
+- unauthorized automation
+- unauthorized data collection
+- surveillance
+- spam
+- bypassing human review
+- automatic submission to authorities, courts or third parties
+- automatic legal, medical, financial or administrative decisions
+- offensive security, exploits, payloads or unauthorized scans
+
+## Human Review
+
+The project may structure and prepare local output.
+
+It must not decide, submit or externally act without explicit human review and a separate permitted implementation context.
