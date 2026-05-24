@@ -28,6 +28,8 @@ The project may structure and prepare local output.
 
 It must not decide, submit or externally act without explicit human review and a separate permitted implementation context.
 
+This public repository itself does not authorize any external action. Any future external-action implementation would require separate private/legal review and is outside this public layer.
+
 ## External Effect
 
 The public-safe layer contains no sending, filing, authority-contact, court-contact, API submission or third-party communication layer. Any request for external effect must be blocked in this repository.
