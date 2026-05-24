@@ -14,7 +14,7 @@ Nothing in this repository is legal advice, tax advice or a final legal assessme
 
 ```text
 REPOSITORY_NAME: civic-protection-cell-public
-REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
+REPOSITORY_FULL_NAME: Cyberpunk2088/civic-protection-cell-public
 REPOSITORY_VISIBILITY: PRIVATE_UNTIL_MANUAL_GITHUB_ACTION
 PUBLIC_RELEASE: OWNER_APPROVED_FOR_PUBLICATION_PREP
 HUMAN_APPROVAL: GIVEN
