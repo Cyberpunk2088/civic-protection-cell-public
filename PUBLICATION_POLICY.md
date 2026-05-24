@@ -10,6 +10,7 @@ PRIVATE_TARGET_REPO: ACTIVE
 PUBLIC_RELEASE: BLOCKED
 HUMAN_APPROVAL: NOT_GIVEN
 LEGAL_REVIEW: OPEN
+LEGAL_RELEASE_BLOCKERS: ACTIVE
 PROTECTED_CORE: CONFIRMED_EXCLUDED
 CI_STATUS: PASSED_OBSERVED
 REAL_DATA: PROHIBITED
@@ -17,6 +18,12 @@ SYNTHETIC_DATA_ONLY: REQUIRED
 EXTERNAL_EFFECT: BLOCKED
 NODE20_DEPRECATION_WARNING: TRACKED
 ```
+
+## Legal Release Blocker Register
+
+`LEGAL_RELEASE_BLOCKERS.md` is the active blocker register for provider, privacy, consumer, payment, tax, invoice, legal-services, security-contact, data and external-action release blockers.
+
+It is preparatory only. It does not provide legal clearance and does not replace `HUMAN_APPROVAL.md`.
 
 ## Release Requirements
 
@@ -33,6 +40,7 @@ Public release requires all of the following:
 - Disclaimer present
 - Threat model present
 - Publication policy present
+- Legal release blocker register present and reviewed
 - License posture documented
 - Provider information reviewed
 - Privacy notice reviewed
@@ -52,6 +60,8 @@ Codex must not approve public release. Public release remains blocked until a hu
 Before any public release, a qualified human/legal reviewer must decide whether provider information, privacy notice, consumer information, withdrawal/refund wording, tax/invoice/payment terms and Rechtsdienstleistungsgesetz boundaries are required or need revisions.
 
 Security contact and vulnerability-reporting processes must also be reviewed before public release so reports do not require public disclosure of sensitive details.
+
+Open items must be tracked in `LEGAL_RELEASE_BLOCKERS.md` until resolved by a qualified human/legal reviewer or by an explicit owner decision.
 
 ## No Automatic Publication
 
