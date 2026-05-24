@@ -12,3 +12,4 @@
 - Core tests expanded for classifier, deadline checker, evidence card and demo.
 - Safety tests expanded for no external action, absent Human Approval, and private-data-pattern checks in tests and examples.
 - Added manual workflow dispatch for observable CI verification.
+- Recorded observed GitHub Actions test success while keeping public release blocked.

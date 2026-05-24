@@ -8,7 +8,7 @@ Public-safe, local-first prototype for civic document structure, deadline-risk a
 REPOSITORY_VISIBILITY: PRIVATE
 PUBLIC_RELEASE: BLOCKED
 TEST_STATUS: PASSED_LOCAL_PYTHON3
-CI_STATUS: NOT_OBSERVED
+CI_STATUS: PASSED_OBSERVED
 EXTERNAL_ACTION: BLOCKED
 REAL_DATA: PROHIBITED
 SYNTHETIC_DATA: ONLY
@@ -59,4 +59,4 @@ Donation/support and unrestricted payment links are listed in `SPONSORSHIP_AND_S
 
 ## Release Note
 
-This repository is private and public release remains blocked until explicit human approval is documented and CI is observed.
+This repository is private and public release remains blocked until explicit human approval is documented.

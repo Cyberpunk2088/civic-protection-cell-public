@@ -16,11 +16,11 @@ The audit covers repository structure, core Python modules, local tests, governa
 AUDIT_STATUS: PASSED_WITH_RELEASE_BLOCKERS
 PRIVATE_TARGET_REPO: ACTIVE
 PUBLIC_RELEASE: BLOCKED
-PUBLIC_RELEASE_REASON: HUMAN_APPROVAL.md absent and CI not observed
-PUBLIC_SAFE_RELEASE_CANDIDATE_READY: NOT_SET
+PUBLIC_RELEASE_REASON: HUMAN_APPROVAL.md absent
+PUBLIC_SAFE_RELEASE_CANDIDATE_READY: READY_BUT_BLOCKED
 TEST_STATUS: PASSED_LOCAL_PYTHON3
 LOCAL_TEST_STATUS: PASSED
-CI_STATUS: NOT_OBSERVED
+CI_STATUS: PASSED
 HUMAN_APPROVAL: NOT_GIVEN
 HUMAN_REVIEW: REQUIRED
 EXTERNAL_EFFECT: BLOCKED
@@ -62,11 +62,20 @@ CI workflow file exists:
 
 The workflow includes `workflow_dispatch` so CI can be manually triggered and observed.
 
-CI was not observed as a successful GitHub Actions run in this run.
+Observed GitHub Actions run:
 
 ```text
-CI_STATUS: NOT_OBSERVED
+workflow: tests
+event: workflow_dispatch
+run: 26354008820
+result: success
 ```
+
+```text
+CI_STATUS: PASSED
+```
+
+Note: GitHub Actions emitted a Node.js 20 deprecation warning for `actions/checkout@v4` and `actions/setup-python@v5`. This is not a failed CI result, but it should be tracked before later public release work.
 
 ## Safety-Invariants
 
@@ -172,29 +181,28 @@ civic-protection-cell-public
 ## Offene Blocker
 
 ```text
-CI_STATUS: NOT_OBSERVED
 HUMAN_APPROVAL.md: ABSENT_BY_DESIGN
 PUBLIC_RELEASE: BLOCKED
 LEGAL_REVIEW: RECOMMENDED_BEFORE_PUBLIC_RELEASE
 REPO_NAME_PUBLIC_REVIEW: OPEN
+GITHUB_ACTIONS_NODE20_DEPRECATION_WARNING: OBSERVED
 ```
 
 ## Release-Entscheidung
 
 ```text
 PUBLIC_RELEASE: BLOCKED
-RELEASE_CANDIDATE_READY: NOT_SET
-NEXT_ACTION: manually run GitHub Actions workflow_dispatch and observe result
+RELEASE_CANDIDATE_READY: READY_BUT_BLOCKED
+NEXT_ACTION: human review; do not create HUMAN_APPROVAL.md unless explicit approval is given
 ```
 
-Reason: CI was not observed and Human Approval has not been given.
+Reason: Human Approval has not been given.
 
 ## Next Command
 
 ```text
 git status --short
 python3 -m pytest -q
-manually run GitHub Actions workflow_dispatch and observe result
 ```
 
-After human review, optionally observe GitHub Actions on the private repo. Do not create `HUMAN_APPROVAL.md` unless explicit human approval is given.
+After human review, do not create `HUMAN_APPROVAL.md` unless explicit human approval is given.
