@@ -1,7 +1,7 @@
 # Protected Core Audit
 
 Date: 2026-05-24
-Repository: `Cyberperpunk2078/-civic-protection-cell-public`
+Repository: `Cyberperpunk2078/civic-protection-cell-public`
 
 ## Public Layer Allowed
 
@@ -40,8 +40,12 @@ Repository: `Cyberperpunk2078/-civic-protection-cell-public`
 ## Status
 
 ```text
-PROTECTED_CORE_EXCLUSION: CONFIRMED
+REPOSITORY_NAME: civic-protection-cell-public
+REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
+REPO_NAME_PUBLIC_REVIEW: RESOLVED
+PROTECTED_CORE: CONFIRMED_EXCLUDED
 PUBLIC_RELEASE: BLOCKED
+HUMAN_APPROVAL: NOT_GIVEN
 HUMAN_REVIEW: REQUIRED
 ```
 
