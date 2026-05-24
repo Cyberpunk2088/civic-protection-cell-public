@@ -1,143 +1,77 @@
 # Final Audit Report
 
 Date: 2026-05-24
-Repository: `Cyberperpunk2078/civic-protection-cell-public`
+Repository: `Cyberpunk2088/civic-protection-cell-public`
 Project: `civic-protection-cell-public`
 
 ## Scope
 
 Public-safe, local-first Civic Protection Cell working draft.
 
-The audit covers repository structure, core Python modules, local tests, governance files, support links, publication policy, license posture and protected-core exclusion.
+The audit covers repository structure, core Python modules, local tests, governance files, support links, publication policy, license posture, owner approval record and protected-core exclusion.
 
 ## Current Status
 
 ```text
-AUDIT_STATUS: PASSED_WITH_RELEASE_BLOCKERS
+AUDIT_STATUS: PASSED_WITH_MANUAL_VISIBILITY_PENDING
 REPOSITORY_NAME: civic-protection-cell-public
-REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
-REPO_NAME_PUBLIC_REVIEW: RESOLVED
+REPOSITORY_FULL_NAME: Cyberpunk2088/civic-protection-cell-public
+REPO_OWNER_NAMESPACE: Cyberpunk2088
 PRIVATE_TARGET_REPO: ACTIVE
-PUBLIC_RELEASE: BLOCKED
-PUBLIC_RELEASE_REASON: HUMAN_APPROVAL.md absent
-PUBLIC_SAFE_RELEASE_CANDIDATE_READY: READY_BUT_BLOCKED
-TEST_STATUS: PASSED_LOCAL_PYTHON3
-LOCAL_TEST_STATUS: PASSED
-CI_STATUS: PASSED_OBSERVED
-HUMAN_APPROVAL: NOT_GIVEN
+PUBLIC_RELEASE_PREP: OWNER_APPROVED
+PUBLIC_VISIBILITY: PRIVATE_UNTIL_MANUAL_GITHUB_ACTION
+HUMAN_APPROVAL: GIVEN
+HUMAN_APPROVAL_FILE: PRESENT_GUARDED
 HUMAN_REVIEW: REQUIRED
 EXTERNAL_EFFECT: BLOCKED
 REAL_DATA: PROHIBITED
 SYNTHETIC_DATA_ONLY: REQUIRED
 PROTECTED_CORE: CONFIRMED_EXCLUDED
-NODE20_DEPRECATION_WARNING: RESOLVED
-NODE24_ACTIONS_UPDATE_STATUS: PASSED_OBSERVED
-LEGAL_REVIEW: RECOMMENDED_BEFORE_PUBLIC_RELEASE
+TAX_NUMBER_PUBLICATION: NO
+BANK_DATA_PUBLICATION: NO
+PAYMENT_ROUTE: PAYPAL_ONLY
+LEGAL_REVIEW: RECOMMENDED_BEFORE_PUBLIC_PROMOTION_OR_COMMERCIAL_USE
+CI_STATUS: PASSED_OBSERVED_AFTER_HUMAN_APPROVAL_TEST_FIX
+LATEST_GREEN_COMMIT: af9338b058c358e0f4f14d439ddb26585c852e69
 ```
 
-## Teststatus
+## CI Status
 
-Local command observed:
+The temporary red runs after PR #14 were caused by the intentional addition of `HUMAN_APPROVAL.md` while the old test still required that file to be absent.
+
+That mismatch was fixed by PR #15.
 
 ```text
-python3 -m pytest -q
-23 passed in 0.19s
+PR_14: MERGED_OWNER_APPROVAL_RECORD
+PR_14_CI: HISTORICAL_FAILURE_SUPERSEDED
+PR_15: MERGED_TEST_FIX
+PR_15_COMMIT: af9338b058c358e0f4f14d439ddb26585c852e69
+CI_STATUS_AFTER_PR15: PASSED_OBSERVED
 ```
 
-Status:
+## Human Approval Status
+
+`HUMAN_APPROVAL.md` exists and is guarded by safety markers.
+
+Required guard posture:
 
 ```text
-TEST_STATUS: PASSED
+OWNER_APPROVAL: GIVEN
+REPOSITORY_SCOPE: Public-safe repository layer only
+LEGAL_REVIEW_STATUS: NOT_REPLACED_BY_THIS_RECORD
+REPOSITORY_VISIBILITY_CHANGE: MANUAL_GITHUB_ACTION_REQUIRED
+REAL_DATA: PROHIBITED
+SYNTHETIC_DATA: ONLY
+EXTERNAL_ACTION: BLOCKED
+LEGAL_ADVICE: NOT_PROVIDED
+FINAL_DEADLINE_CALCULATION: NOT_PROVIDED
+HUMAN_REVIEW: REQUIRED
+PROTECTED_CORE: EXCLUDED
+TAX_NUMBER_PUBLICATION: NO
+BANK_DATA_PUBLICATION: NO
 ```
 
-Note: `python -m pytest -q` could not run because `python` is not available on this machine:
-
-```text
-/bin/bash: python: command not found
-```
-
-The equivalent `python3 -m pytest -q` passed locally.
-
-## CI-Status
-
-CI workflow file exists:
-
-```text
-.github/workflows/tests.yml
-```
-
-The workflow includes `workflow_dispatch` so CI can be manually triggered and observed.
-
-Observed GitHub Actions run:
-
-```text
-workflow: tests
-event: workflow_dispatch
-run: 26354008820
-result: success
-```
-
-Observed rename documentation commit run:
-
-```text
-commit: 5f88dd1d6da09625b62619a740252613fab4c785
-workflow: tests
-event: workflow_dispatch
-run: 26354315043
-result: success
-CI_STATUS_FOR_RENAME_DOC_COMMIT: PASSED_OBSERVED
-```
-
-```text
-CI_STATUS: PASSED_OBSERVED
-```
-
-Note: GitHub Actions emitted a Node.js 20 deprecation warning for `actions/checkout@v4` and `actions/setup-python@v5`. This is not a failed CI result. It is tracked in `MAINTENANCE_NODE20_ACTIONS_WARNING.md` before later public release work.
-
-The official GitHub releases for `actions/checkout@v6` and `actions/setup-python@v6` were checked. The workflow was updated to v6 action tags and observed in CI:
-
-```text
-commit: debf15839bc9f53f2cfb1a048582f53afa86ad3e
-workflow: tests
-event: push
-run: 26354560832
-result: success
-CI_STATUS_FOR_ACTIONS_RUNTIME_UPDATE: PASSED_OBSERVED
-```
-
-## PR #5 post-merge validation — 2026-05-24
-
-- PR: #5
-- Merge commit: 0f9fc3ae6b17cd6ef419d778857fee3872b74715
-- Scope: deadline-risk evidence labels
-- Changed files:
-  - CHANGELOG.md
-  - src/civic_protection_cell/deadline_checker.py
-  - tests/test_deadline_checker.py
-- Local tests:
-  - python3 -m pytest -q: PASSED
-  - safety tests: PASSED
-  - python3 -m civic_protection_cell.demo: PASSED
-  - git diff --check: PASSED
-- GitHub Actions:
-  - workflow: tests
-  - run: 26359942708
-  - conclusion: success
-  - CI_STATUS_FOR_PR5_MERGE: PASSED_OBSERVED
-- Safety:
-  - PUBLIC_RELEASE: BLOCKED
-  - HUMAN_APPROVAL: NOT_GIVEN
-  - HUMAN_APPROVAL.md: ABSENT
-  - EXTERNAL_ACTION: BLOCKED
-  - REAL_DATA: PROHIBITED
-  - SYNTHETIC_ONLY: REQUIRED
-  - PROTECTED_CORE: CONFIRMED_EXCLUDED
-- Release decision:
-  - PUBLIC_RELEASE: BLOCKED
-  - PR #5 merge does not approve publication
-  - PR #5 merge does not create Human Approval
-
-## Safety-Invariants
+## Safety Invariants
 
 ```text
 NO_REAL_DATA: PASS
@@ -150,7 +84,9 @@ NO_PRODUCTIVE_AGENT_WRITE_ACTION: PASS
 NO_FINAL_HIGH_RISK_ADVICE: PASS
 NO_FINAL_DEADLINE_CALCULATION: PASS
 HUMAN_REVIEW_REQUIRED: PASS
-PUBLIC_RELEASE_BLOCKED: PASS
+PROTECTED_CORE_EXCLUDED: PASS
+TAX_NUMBER_NOT_PUBLISHED: PASS
+BANK_DATA_NOT_PUBLISHED: PASS
 ```
 
 ## Datenschutzstatus
@@ -161,110 +97,62 @@ Examples are synthetic and explicitly marked as synthetic. No real case files we
 DATA_STATUS: SYNTHETIC_ONLY
 ```
 
-## Secret-Scan-Status
+## External-Effect Status
 
-Local pytest includes an obvious secret-pattern scan.
-
-```text
-SECRET_SCAN_STATUS: PASSED_LOCAL_BASIC_SCAN
-```
-
-This is not a full professional secret scan.
-
-## External-Effect-Status
-
-Core review gate always returns:
+Core review gate remains blocked for external action.
 
 ```text
 allowed_external_action: false
 external_action: BLOCKED
+EXTERNAL_EFFECT_STATUS: BLOCKED
 ```
 
 No sending, filing, authority-contact, court-contact or third-party submission module is present.
 
-```text
-EXTERNAL_EFFECT_STATUS: BLOCKED
-```
+## Protected-Core Status
 
-## Human-Review-Status
-
-Human Review remains mandatory. `HUMAN_APPROVAL.md` is intentionally absent.
-
-```text
-HUMAN_REVIEW_STATUS: REQUIRED
-PUBLIC_RELEASE_APPROVAL: NOT_GIVEN
-```
-
-## Protected-Core-Status
-
-Protected-core material is excluded from the public layer.
+Protected-core material remains excluded from the public layer.
 
 ```text
 PROTECTED_CORE_EXCLUSION: CONFIRMED
+COMMERCIAL_CORE: PROTECTED
 ```
 
-## Payment-/Support-Status
+## Payment / Support Status
 
-Donation/support and pay-for-work links are documented in:
+Payment and support references use the PayPal-only route documented in the repository support materials.
 
 ```text
-SPONSORSHIP_AND_SUPPORT.md
-.github/FUNDING.yml
+PAYMENT_ROUTE: PAYPAL_ONLY
+PAYMENT_PROCESSOR_INTEGRATION: NOT_ADDED
 ```
 
-Payment does not approve public release, external action, production use or commercial rights beyond a separate agreement.
+Payment does not approve external action, legal advice, production use, protected-core access or commercial rights beyond a separate reviewed agreement.
 
-## License-/Rights-Status
+## License / Rights Status
 
 ```text
 LICENSE_STATUS: WORKING_DRAFT
 RIGHTS_HOLDER: Cyberpunk Public-Safe Systems
 COMMERCIAL_USE: REQUIRES_PERMISSION_OR_SEPARATE_AGREEMENT
 OSI_OPEN_SOURCE: NOT_CLAIMED
-LEGAL_REVIEW_RECOMMENDED_BEFORE_PUBLIC_RELEASE
+LEGAL_REVIEW_RECOMMENDED_BEFORE_PUBLIC_PROMOTION_OR_COMMERCIAL_USE
 ```
 
-## Repo-Namenshinweis
-
-Current private target repository:
+## Remaining Manual Steps
 
 ```text
-Cyberperpunk2078/civic-protection-cell-public
+PUBLIC_VISIBILITY_CHANGE: MANUAL_GITHUB_OWNER_ACTION_REQUIRED
+LEGAL_TAX_PROVIDER_REVIEW: RECOMMENDED
+PUBLIC_PROMOTION: DO_NOT_START_WITHOUT_FINAL_OWNER_CHECK
 ```
 
-Repository naming review:
+## Release Decision
 
 ```text
-REPO_NAME_PUBLIC_REVIEW: RESOLVED
-REPOSITORY_NAME: civic-protection-cell-public
-REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
+PUBLIC_RELEASE_PREP: OWNER_APPROVED
+PUBLIC_VISIBILITY: NOT_CHANGED_BY_AUTOMATION
+NEXT_ACTION: manual owner visibility decision in GitHub settings after final review
 ```
 
-## Offene Blocker
-
-```text
-HUMAN_APPROVAL.md: ABSENT_BY_DESIGN
-PUBLIC_RELEASE: BLOCKED
-LEGAL_REVIEW: RECOMMENDED_BEFORE_PUBLIC_RELEASE
-GITHUB_ACTIONS_NODE20_DEPRECATION_WARNING: RESOLVED
-NODE24_ACTIONS_UPDATE_STATUS: PASSED_OBSERVED
-```
-
-## Release-Entscheidung
-
-```text
-PUBLIC_RELEASE: BLOCKED
-RELEASE_CANDIDATE_READY: READY_BUT_BLOCKED
-NEXT_ACTION: human review; do not create HUMAN_APPROVAL.md unless explicit approval is given
-```
-
-Reason: Human Approval has not been given.
-
-## Next Command
-
-```text
-git status --short
-python3 -m pytest -q
-```
-
-After human review, do not create `HUMAN_APPROVAL.md` unless explicit human approval is given.
+This audit does not itself change repository visibility.
