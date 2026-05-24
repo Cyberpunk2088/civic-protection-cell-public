@@ -19,10 +19,18 @@ Legal form: Sole proprietor / owner-operated project, review required
 Street address: Bleichstrasse 9
 Postal code and city: 73312 Geislingen
 Country: Germany
-Public contact email: TO_BE_COMPLETED
+Public contact email: zxhim.v@gmail.com
 Phone: not published unless separately decided
 VAT ID: not provided
 Responsible for content: Zxhim Vitija, review required
+```
+
+## Public Contact Route
+
+```text
+General contact: zxhim.v@gmail.com
+Security contact: zxhim.v@gmail.com until a dedicated private security contact is created
+Commercial inquiries: zxhim.v@gmail.com
 ```
 
 ## Deliberately Not Published Here
@@ -45,6 +53,7 @@ No separate shop, checkout, payment database or payment integration is added by 
 
 ```text
 PROVIDER_INFO_READY_FOR_OWNER_REVIEW: YES
+PUBLIC_CONTACT_EMAIL: PROVIDED
 PUBLIC_USE_ALLOWED_NOW: NO
 TAX_NUMBER_PUBLICATION: NO
 BANK_DATA_PUBLICATION: NO
