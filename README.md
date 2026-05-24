@@ -1,18 +1,25 @@
 # Civic Protection Cell Public
 
-Synthetic-data-only, local-first working draft for civic document structure, deadline-risk awareness, evidence cards and human review gating.
+Public-safe, synthetic-data-only repository layer for the Civic Protection Cell concept.
 
-This repository is not a legal service, not legal advice, not an official authority or court system, and not suitable for real cases without separate qualified human review.
+This repository is intentionally limited. It contains public-safe documentation, local demo structures and synthetic workflows only. It does not contain the protected commercial core, private case logic, real client data, credentials, private identities, tax data, bank data, private strategy assets or irreversible automation.
+
+## Important Notice
+
+This project is not a law firm, not a legal service, not a public authority and not a court system.
+
+Nothing in this repository is legal advice, tax advice or a final legal assessment. Any real matter, deadline, filing, takedown, complaint, protective action or commercial deployment requires qualified human review before use.
 
 ## Status
 
 ```text
 REPOSITORY_NAME: civic-protection-cell-public
 REPOSITORY_FULL_NAME: Cyberperpunk2078/civic-protection-cell-public
-REPOSITORY_VISIBILITY: PRIVATE
-PUBLIC_RELEASE: BLOCKED
-HUMAN_APPROVAL: NOT_GIVEN
-LEGAL_REVIEW: OPEN
+REPOSITORY_VISIBILITY: PRIVATE_UNTIL_MANUAL_GITHUB_ACTION
+PUBLIC_RELEASE: OWNER_APPROVED_FOR_PUBLICATION_PREP
+HUMAN_APPROVAL: GIVEN
+HUMAN_APPROVAL_FILE: HUMAN_APPROVAL.md
+LEGAL_REVIEW: OPEN / NOT_REPLACED_BY_OWNER_APPROVAL
 TEST_STATUS: PASSED_LOCAL_PYTHON3
 CI_STATUS: PASSED_OBSERVED
 EXTERNAL_ACTION: BLOCKED
@@ -21,54 +28,66 @@ SYNTHETIC_DATA: ONLY
 HUMAN_REVIEW: REQUIRED
 PROTECTED_CORE: CONFIRMED_EXCLUDED
 COMMERCIAL_CORE: PROTECTED
+TAX_NUMBER_PUBLICATION: NO
+BANK_DATA_PUBLICATION: NO
 ```
 
 ## Purpose
 
-This repository helps structure civic or administrative documents without creating final legal conclusions or external actions.
+The repository provides a transparent public layer for:
 
-It can:
+- civic protection workflow explanation
+- synthetic evidence-card concepts
+- local-first safety architecture
+- deadline-risk awareness
+- human review gating
+- public support and sponsorship documentation
 
-- intake synthetic text
-- classify broad document signals
-- mark possible deadline risk
-- create evidence cards
-- enforce review gate status
-- produce local structured output
+## What This Repository Must Not Be Used For
 
-It must not:
+Do not use this repository for:
 
-- process real case material
-- process real public case files in examples
-- send messages
-- submit documents
-- contact authorities
-- calculate final legal deadlines
-- produce final legal, medical, financial or administrative decisions
+- real legal filings
+- real deadline calculation without qualified review
+- automated reporting, takedown or submission
+- processing personal data from real cases
+- replacing lawyers, courts, authorities or qualified advisors
+- publishing private tax, bank or identity data
+- exposing protected commercial logic
 
-## Safe local commands
+## Safety Boundary
 
-```bash
-python -m pip install --upgrade pip
-pip install -e ".[test]"
-python -m pytest -q
-python -m civic_protection_cell.demo
+```text
+DEFAULT_DECISION: NEEDS_HUMAN_REVIEW
+AUTOMATED_EXTERNAL_ACTION: DISABLED
+REAL_PERSONAL_DATA: DISALLOWED
+DEMO_DATA: SYNTHETIC_ONLY
+PAYMENT_ROUTE: PAYPAL_ONLY
+COMMERCIAL_CORE: NOT_INCLUDED
 ```
 
-## Public-Safe Boundary
+## Public Contact / Provider Draft
 
-Public-safe means documentation, synthetic examples, non-production review-gate logic and tests.
+Provider and contact information is maintained in `PROVIDER_INFO_DRAFT.md`.
 
-Protected core remains private: production workflows, premium templates, real case data, operator notes, client-specific logic and commercial implementation methodology.
+The current public contact email is owner-supplied. Personal tax numbers, bank account details and private identifiers must not be published in this repository.
 
-This public repository does not authorize any external action. Any future external-action implementation would require separate private/legal review and remains outside this public layer.
+## Support / Sponsorship
 
-## Support
+Support and sponsorship information is documented in `SPONSORSHIP_AND_SUPPORT.md`.
 
-Donation/support and unrestricted payment links are listed in `SPONSORSHIP_AND_SUPPORT.md`.
+Payment references are PayPal-only. A payment or donation does not create legal representation, does not approve external action and does not remove the human-review requirement.
 
-Payments, donations, sponsorships, or support do not create legal-advice duties, emergency support, response-time guarantees, release approval, production readiness, or access to the Protected Core.
+## Human Approval
+
+Owner human approval for public-release preparation is documented in `HUMAN_APPROVAL.md`.
+
+This approval does not replace legal, tax, provider-identification, consumer-law or platform-policy review.
 
 ## Release Note
 
-This repository is private and public release remains blocked until explicit human approval is documented.
+Human approval is now documented. The repository is prepared for manual public-visibility conversion by the owner.
+
+The repository visibility is not changed by this documentation update. The final visibility switch remains a manual GitHub owner action.
+
+Before public promotion or commercial use, complete the final owner check, provider/contact review, payment wording check and legal/tax review.
