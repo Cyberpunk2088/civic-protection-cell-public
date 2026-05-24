@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- 2026-05-24: Merged PR #5 and recorded post-merge validation for deadline-risk evidence labels. Public Release remains blocked and Human Approval remains not given.
+
 ## 0.1.0
 
 - Initial public-safe target baseline.
