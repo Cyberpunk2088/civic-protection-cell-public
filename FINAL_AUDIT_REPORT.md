@@ -41,7 +41,7 @@ Local command observed:
 
 ```text
 python3 -m pytest -q
-21 passed in 0.13s
+23 passed in 0.19s
 ```
 
 Status:
@@ -104,6 +104,38 @@ run: 26354560832
 result: success
 CI_STATUS_FOR_ACTIONS_RUNTIME_UPDATE: PASSED_OBSERVED
 ```
+
+## PR #5 post-merge validation — 2026-05-24
+
+- PR: #5
+- Merge commit: 0f9fc3ae6b17cd6ef419d778857fee3872b74715
+- Scope: deadline-risk evidence labels
+- Changed files:
+  - CHANGELOG.md
+  - src/civic_protection_cell/deadline_checker.py
+  - tests/test_deadline_checker.py
+- Local tests:
+  - python3 -m pytest -q: PASSED
+  - safety tests: PASSED
+  - python3 -m civic_protection_cell.demo: PASSED
+  - git diff --check: PASSED
+- GitHub Actions:
+  - workflow: tests
+  - run: 26359942708
+  - conclusion: success
+  - CI_STATUS_FOR_PR5_MERGE: PASSED_OBSERVED
+- Safety:
+  - PUBLIC_RELEASE: BLOCKED
+  - HUMAN_APPROVAL: NOT_GIVEN
+  - HUMAN_APPROVAL.md: ABSENT
+  - EXTERNAL_ACTION: BLOCKED
+  - REAL_DATA: PROHIBITED
+  - SYNTHETIC_ONLY: REQUIRED
+  - PROTECTED_CORE: CONFIRMED_EXCLUDED
+- Release decision:
+  - PUBLIC_RELEASE: BLOCKED
+  - PR #5 merge does not approve publication
+  - PR #5 merge does not create Human Approval
 
 ## Safety-Invariants
 
