@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Civic Protection Cell</title>
+  <desc id="desc">Public-safe workflows for civic documents, evidence, deadlines, and human review.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050b18"/>
+      <stop offset="0.55" stop-color="#061a33"/>
+      <stop offset="1" stop-color="#020713"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="48%" r="42%">
+      <stop offset="0" stop-color="#25b9ff" stop-opacity="0.45"/>
+      <stop offset="0.45" stop-color="#0a6dba" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7de7ff"/>
+      <stop offset="0.5" stop-color="#22a8ff"/>
+      <stop offset="1" stop-color="#0b4f91"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7affd4"/>
+      <stop offset="1" stop-color="#24c28a"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.1 0 0 0 0 0.65 0 0 0 0 1 0 0 0 0.9 0" result="blueBlur"/>
+      <feMerge>
+        <feMergeNode in="blueBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#12365c" stroke-opacity="0.24" stroke-width="1"/>
+    </pattern>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#3fb8ff" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#grid)" opacity="0.55"/>
+  <rect width="1280" height="640" fill="url(#dots)" opacity="0.35"/>
+  <rect width="1280" height="640" fill="url(#glow)"/>
+
+  <g opacity="0.55" stroke="#2bbcff" stroke-width="2" fill="none">
+    <path d="M0 150H120l35 38h110"/>
+    <path d="M1015 185h105l38-35h122"/>
+    <path d="M180 548h160l30-28h120"/>
+    <path d="M790 520h115l32 28h170"/>
+    <circle cx="265" cy="188" r="4" fill="#2bbcff"/>
+    <circle cx="1015" cy="185" r="4" fill="#2bbcff"/>
+    <circle cx="490" cy="520" r="4" fill="#2bbcff"/>
+    <circle cx="790" cy="520" r="4" fill="#2bbcff"/>
+  </g>
+
+  <g transform="translate(640 165)" filter="url(#softGlow)">
+    <path d="M0-82 C42-58 78-48 102-45 V10 C102 72 54 116 0 145 C-54 116-102 72-102 10 V-45 C-78-48-42-58 0-82Z" fill="#0a1d38" stroke="url(#cyan)" stroke-width="9"/>
+    <path d="M0-61 C31-43 59-36 78-34 V10 C78 55 43 89 0 112 C-43 89-78 55-78 10 V-34 C-59-36-31-43 0-61Z" fill="#112d50" stroke="#8deeff" stroke-opacity="0.9" stroke-width="3"/>
+    <circle cx="0" cy="-2" r="17" fill="#c4ecff" opacity="0.95"/>
+    <circle cx="-37" cy="17" r="13" fill="#9edcff" opacity="0.9"/>
+    <circle cx="37" cy="17" r="13" fill="#9edcff" opacity="0.9"/>
+    <path d="M-20 24h40c13 0 22 10 22 23v34H-42V47c0-13 9-23 22-23Z" fill="#8dd9ff" opacity="0.88"/>
+    <path d="M-65 39h26c10 0 17 8 17 18v24h-60V57c0-10 7-18 17-18Z" fill="#6bbcf0" opacity="0.76"/>
+    <path d="M39 39h26c10 0 17 8 17 18v24H22V57c0-10 7-18 17-18Z" fill="#6bbcf0" opacity="0.76"/>
+  </g>
+
+  <g transform="translate(105 240)">
+    <rect x="0" y="0" width="168" height="230" rx="18" fill="#081b33" stroke="#40c9ff" stroke-opacity="0.55"/>
+    <path d="M128 0v48h40" fill="none" stroke="#73d6ff" stroke-opacity="0.7" stroke-width="3"/>
+    <path d="M70 50l35 18v35c0 31-23 51-35 58c-12-7-35-27-35-58V68l35-18Z" fill="#102a4d" stroke="#8be4ff" stroke-width="3" opacity="0.9"/>
+    <g stroke="#27c7ff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M34 155l13 13 28-33"/>
+      <path d="M34 200l13 13 28-33"/>
+    </g>
+    <g stroke="#23456d" stroke-width="8" stroke-linecap="round">
+      <path d="M95 150h45"/>
+      <path d="M95 195h48"/>
+    </g>
+  </g>
+
+  <g transform="translate(985 240)">
+    <rect x="0" y="0" width="210" height="230" rx="18" fill="#081b33" stroke="#40c9ff" stroke-opacity="0.45"/>
+    <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#d8f3ff">
+      <rect x="22" y="25" width="48" height="48" rx="12" fill="#0c2c52" stroke="#1aaeff" stroke-opacity="0.4"/>
+      <text x="88" y="57">DOCUMENTS</text>
+      <rect x="22" y="80" width="48" height="48" rx="12" fill="#0c2c52" stroke="#20d8a4" stroke-opacity="0.4"/>
+      <text x="88" y="112">EVIDENCE</text>
+      <rect x="22" y="135" width="48" height="48" rx="12" fill="#0c2c52" stroke="#988cff" stroke-opacity="0.4"/>
+      <text x="88" y="167">DEADLINES</text>
+      <rect x="22" y="190" width="48" height="48" rx="12" fill="#0c2c52" stroke="#1aaeff" stroke-opacity="0.4"/>
+      <text x="88" y="222">HUMAN REVIEW</text>
+    </g>
+    <g fill="#29d2ff">
+      <circle cx="185" cy="49" r="5"/><circle cx="185" cy="104" r="5"/><circle cx="185" cy="159" r="5"/><circle cx="185" cy="214" r="5"/>
+    </g>
+  </g>
+
+  <g text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="640" y="342" fill="#ffffff" font-size="82" font-weight="800" letter-spacing="-2" filter="url(#softGlow)">Civic Protection Cell</text>
+    <line x1="315" y1="378" x2="965" y2="378" stroke="#35c8ff" stroke-width="3" opacity="0.8"/>
+    <circle cx="640" cy="378" r="10" fill="#06233f" stroke="#47d8ff" stroke-width="3"/>
+    <text x="640" y="432" fill="#d9f6ff" font-size="32" font-weight="500">Public-safe workflows for civic documents,</text>
+    <text x="640" y="475" fill="#d9f6ff" font-size="32" font-weight="500">evidence, deadlines, and human review</text>
+    <rect x="420" y="506" width="440" height="50" rx="25" fill="#061629" stroke="#4cbfff" stroke-opacity="0.58"/>
+    <text x="640" y="540" font-size="24" font-weight="700">
+      <tspan fill="#58a6ff">Cyberpunk2088</tspan><tspan fill="#cfefff"> / </tspan><tspan fill="#52e6a7">civic-protection-cell-public</tspan>
+    </text>
+  </g>
+</svg>
