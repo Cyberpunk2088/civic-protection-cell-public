@@ -1,5 +1,7 @@
 # Civic Protection Cell Public
 
+![Civic Protection Cell public-safe workflow banner](assets/civic-protection-cell-social-preview.svg)
+
 Public-safe, synthetic-data-only repository layer for the Civic Protection Cell concept.
 
 This repository is intentionally limited. It contains public-safe documentation, local demo structures and synthetic workflows only. It does not contain the protected commercial core, private case logic, real client data, credentials, private identities, tax data, bank data, private strategy assets or irreversible automation.
