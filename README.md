@@ -2,9 +2,40 @@
 
 ![Civic Protection Cell public-safe workflow banner](assets/civic-protection-cell-social-preview.svg)
 
-Public-safe, synthetic-data-only repository layer for the Civic Protection Cell concept.
+**Public-safe workflows for civic documents, evidence, deadline-risk awareness and human review.**
 
-This repository is intentionally limited. It contains public-safe documentation, local demo structures and synthetic workflows only. It does not contain the protected commercial core, private case logic, real client data, credentials, private identities, tax data, bank data, private strategy assets or irreversible automation.
+Civic Protection Cell Public is a local-first, synthetic-data-only project layer for structuring civic or administrative paperwork without creating external action, legal advice or real-case automation.
+
+> Documents in order. Evidence structured. Deadlines treated as risk signals. Human review stays mandatory.
+
+## Quick Start
+
+```bash
+git clone https://github.com/Cyberpunk2088/civic-protection-cell-public.git
+cd civic-protection-cell-public
+python3 -m pip install -e ".[test]"
+python3 -m pytest -q
+python3 -m civic_protection_cell.demo
+```
+
+Expected posture:
+
+```text
+external_action: BLOCKED
+allowed_external_action: false
+real_data: PROHIBITED
+synthetic_data: ONLY
+human_review: REQUIRED
+```
+
+## What It Helps With
+
+- document structure for civic and administrative workflows
+- synthetic evidence-card concepts
+- deadline-risk awareness without final deadline calculation
+- local-first review output
+- human review gating before any real-world use
+- public-safe explanation of a protected private/commercial core boundary
 
 ## Important Notice
 
@@ -17,8 +48,8 @@ Nothing in this repository is legal advice, tax advice or a final legal assessme
 ```text
 REPOSITORY_NAME: civic-protection-cell-public
 REPOSITORY_FULL_NAME: Cyberpunk2088/civic-protection-cell-public
-REPOSITORY_VISIBILITY: PRIVATE_UNTIL_MANUAL_GITHUB_ACTION
-PUBLIC_RELEASE: OWNER_APPROVED_FOR_PUBLICATION_PREP
+REPOSITORY_VISIBILITY: PUBLIC
+PUBLIC_RELEASE_PREP: OWNER_APPROVED
 HUMAN_APPROVAL: GIVEN
 HUMAN_APPROVAL_FILE: HUMAN_APPROVAL.md
 LEGAL_REVIEW: OPEN / NOT_REPLACED_BY_OWNER_APPROVAL
@@ -30,20 +61,27 @@ SYNTHETIC_DATA: ONLY
 HUMAN_REVIEW: REQUIRED
 PROTECTED_CORE: CONFIRMED_EXCLUDED
 COMMERCIAL_CORE: PROTECTED
+PAYMENT_ROUTE: PAYPAL_ONLY
 TAX_NUMBER_PUBLICATION: NO
 BANK_DATA_PUBLICATION: NO
 ```
 
-## Purpose
+## Repository Topics
 
-The repository provides a transparent public layer for:
+Suggested GitHub topics for discovery:
 
-- civic protection workflow explanation
-- synthetic evidence-card concepts
-- local-first safety architecture
-- deadline-risk awareness
-- human review gating
-- public support and sponsorship documentation
+```text
+civic-tech
+document-workflow
+evidence
+human-review
+synthetic-data
+legal-tech
+workflow-automation
+public-safe
+local-first
+deadline-management
+```
 
 ## What This Repository Must Not Be Used For
 
@@ -80,6 +118,24 @@ Support and sponsorship information is documented in `SPONSORSHIP_AND_SUPPORT.md
 
 Payment references are PayPal-only. A payment or donation does not create legal representation, does not approve external action and does not remove the human-review requirement.
 
+## Contributing
+
+See `CONTRIBUTING.md` before opening issues, pull requests or suggestions.
+
+Contributions must preserve the public-safe boundary:
+
+```text
+no real data
+no external action
+no legal advice
+no automatic submission
+no protected-core publication
+```
+
+## Support
+
+See `SUPPORT.md` for contact, sponsorship and paid-work boundaries.
+
 ## Human Approval
 
 Owner human approval for public-release preparation is documented in `HUMAN_APPROVAL.md`.
@@ -88,8 +144,6 @@ This approval does not replace legal, tax, provider-identification, consumer-law
 
 ## Release Note
 
-Human approval is now documented. The repository is prepared for manual public-visibility conversion by the owner.
-
-The repository visibility is not changed by this documentation update. The final visibility switch remains a manual GitHub owner action.
+Human approval is documented. The repository is public-safe prepared and publicly visible.
 
 Before public promotion or commercial use, complete the final owner check, provider/contact review, payment wording check and legal/tax review.
