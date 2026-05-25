@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- 2026-05-25: Improved public README launch clarity with a stronger value proposition, Quick Start, suggested repository topics, support link, contribution link and clearer public-safe positioning.
+- 2026-05-25: Added `CONTRIBUTING.md` with public-safe contribution rules.
+- 2026-05-25: Added `SUPPORT.md` with support, paid-work, sensitive-data and security-reporting boundaries.
 - 2026-05-24: Synced repository owner namespace to `Cyberpunk2088/civic-protection-cell-public`.
 - 2026-05-24: Added guarded Human Approval documentation and updated the related safety test.
 - 2026-05-24: Added legal release blocker documentation.
